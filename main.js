@@ -1,15 +1,16 @@
 import { Participante } from "./participante.js";
 
-const participantes = []
-let idParticipante = 0
+const participantes = [];
+let idParticipante = 0;
 
-function createParticipante(name, idParticipante) {
+function createParticipante(name, idP) {
+  console.log(idP);
   let divParticipante = document.createElement("div");
   let nameParticipante = document.createElement("p");
   let participation = document.createElement("div");
   divParticipante.classList.add("participante");
   participation.classList.add("participacion", "active");
-  participation.setAttribute('id', `pa-${idParticipante}`)
+  participation.setAttribute("id", idParticipante);
   let nameNode = document.createTextNode(name);
   nameParticipante.appendChild(nameNode);
   divParticipante.appendChild(nameParticipante);
@@ -22,26 +23,25 @@ function renderNewParticipante(name) {
   table.appendChild(createParticipante(name));
 }
 
-function pushParticipante(name) {
-  participantes.push(new Participante(name));
+function pushParticipante(name, id) {
+  participantes.push(new Participante(id, name));
   console.log(participantes);
 }
 
 function addParticipante() {
-    idParticipante++
   let name = document.getElementById("name").value;
-  if (name != '') {
+  if (name != "") {
+    idParticipante++;
+    console.log(idParticipante);
     pushParticipante(name, idParticipante);
     renderNewParticipante(name, idParticipante);
   }
 }
 
-function deleteParticipante() {
-
-}
+function deleteParticipante() {}
 
 let btnAddParticipante = document.getElementById("addParticipante");
 btnAddParticipante.addEventListener("click", addParticipante);
 
-let btnDeleteParticipante = document.getElementById("deleteParticipante")
-btnDeleteParticipante.addEventListener("click", deleteParticipante)
+let btnDeleteParticipante = document.getElementById("deleteParticipante");
+btnDeleteParticipante.addEventListener("click", deleteParticipante);
