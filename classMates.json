@@ -1,0 +1,62 @@
+[
+    {
+        "id": 1,
+        "name": "Moha",
+        "participacion": true
+    },
+    {
+        "id": 2,
+        "name": "Adrià",
+        "participacion": true
+    },
+    {
+        "id": 3,
+        "name": "David",
+        "participacion": true
+    },
+    {
+        "id": 4,
+        "name": "Albert",
+        "participacion": true
+    },
+    {
+        "id": 5,
+        "name": "Alex",
+        "participacion": true
+    },
+    {
+        "id": 6,
+        "name": "Sergi",
+        "participacion": true
+    },
+    {
+        "id": 7,
+        "name": "Sergio",
+        "participacion": true
+    },
+    {
+        "id": 8,
+        "name": "Thirza",
+        "participacion": true
+    },
+    {
+        "id": 9,
+        "name": "Eric",
+        "participacion": true
+    },
+    {
+        "id": 10,
+        "name": "Sheherezade",
+        "participacion": true
+    },
+    {
+        "id": 11,
+        "name": "Sara",
+        "participacion": true
+    },
+    {
+        "id": 12,
+        "name": "Alber",
+        "participacion": true
+    }
+]

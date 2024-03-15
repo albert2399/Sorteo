@@ -9,7 +9,7 @@ function createParticipante(name) {
   let participation = document.createElement("div");
   divParticipante.classList.add("participante");
   participation.classList.add("participacion", "active");
-  participation.setAttribute("id", 'pa-' + idParticipante);
+  participation.setAttribute("id", "pa-" + idParticipante);
   let nameNode = document.createTextNode(name);
   nameParticipante.appendChild(nameNode);
   divParticipante.appendChild(nameParticipante);
@@ -27,26 +27,45 @@ function pushParticipante(name) {
   console.log(participantes);
 }
 
+function isAvaible(name) {
+  let participanteAvaible = true;
+  if (participantes.length > 0) {
+    participantes.forEach((participante) => {
+      if (participante.nombre == name) {
+        participanteAvaible = false;
+      }
+    });
+  }
+  return participanteAvaible;
+}
+
 function addParticipante() {
   let name = document.getElementById("name").value;
-  if (name != "") {
+  if (name != "" && isAvaible(name)) {
     idParticipante++;
-    console.log(idParticipante);
     pushParticipante(name);
     renderNewParticipante(name);
   }
 }
 
 function deleteParticipante() {
-    let aliveParticipantes = []
-    participantes.forEach(participante => {
-        if (participante.participacion == true) {
-            aliveParticipantes.push(participante)
-        }
-    })
-    let randomDeleteParticipante = Math.floor(Math.random() * aliveParticipantes.length)
-    aliveParticipantes[randomDeleteParticipante].participacion = false
-    document.getElementById('pa-' + aliveParticipantes[randomDeleteParticipante].id).classList.remove('active')
+  if (participantes.length > 1) {
+    let aliveParticipantes = [];
+    participantes.forEach((participante) => {
+      if (participante.participacion == true) {
+        aliveParticipantes.push(participante);
+      }
+    });
+    let randomDeleteParticipante = Math.floor(
+      Math.random() * aliveParticipantes.length
+    );
+    aliveParticipantes[randomDeleteParticipante].participacion = false;
+    document
+      .getElementById("pa-" + aliveParticipantes[randomDeleteParticipante].id)
+      .classList.remove("active");
+    var audio = new Audio("audio/disparo.mp3");
+    audio.play();
+  }
 }
 
 let btnAddParticipante = document.getElementById("addParticipante");
@@ -54,3 +73,72 @@ btnAddParticipante.addEventListener("click", addParticipante);
 
 let btnDeleteParticipante = document.getElementById("deleteParticipante");
 btnDeleteParticipante.addEventListener("click", deleteParticipante);
+
+const classmates = [
+  {
+    id: 1,
+    name: "Moha",
+    participacion: true,
+  },
+  {
+    id: 2,
+    name: "Adrià",
+    participacion: true,
+  },
+  {
+    id: 3,
+    name: "David",
+    participacion: true,
+  },
+  {
+    id: 4,
+    name: "Albert",
+    participacion: true,
+  },
+  {
+    id: 5,
+    name: "Alex",
+    participacion: true,
+  },
+  {
+    id: 6,
+    name: "Sergi",
+    participacion: true,
+  },
+  {
+    id: 7,
+    name: "Sergio",
+    participacion: true,
+  },
+  {
+    id: 8,
+    name: "Thirza",
+    participacion: true,
+  },
+  {
+    id: 9,
+    name: "Eric",
+    participacion: true,
+  },
+  {
+    id: 10,
+    name: "Sheherezade",
+    participacion: true,
+  },
+  {
+    id: 11,
+    name: "Sara",
+    participacion: true,
+  },
+  {
+    id: 12,
+    name: "Aitor",
+    participacion: true,
+  },
+];
+
+classmates.map((classmate) => {
+  pushParticipante(classmate.id, classmate.name);
+  idParticipante = classmate.id;
+  renderNewParticipante(classmate.name);
+});
