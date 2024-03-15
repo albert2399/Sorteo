@@ -3,14 +3,13 @@ import { Participante } from "./participante.js";
 const participantes = [];
 let idParticipante = 0;
 
-function createParticipante(name, idP) {
-  console.log(idP);
+function createParticipante(name) {
   let divParticipante = document.createElement("div");
   let nameParticipante = document.createElement("p");
   let participation = document.createElement("div");
   divParticipante.classList.add("participante");
   participation.classList.add("participacion", "active");
-  participation.setAttribute("id", idParticipante);
+  participation.setAttribute("id", 'pa-' + idParticipante);
   let nameNode = document.createTextNode(name);
   nameParticipante.appendChild(nameNode);
   divParticipante.appendChild(nameParticipante);
@@ -23,8 +22,8 @@ function renderNewParticipante(name) {
   table.appendChild(createParticipante(name));
 }
 
-function pushParticipante(name, id) {
-  participantes.push(new Participante(id, name));
+function pushParticipante(name) {
+  participantes.push(new Participante(idParticipante, name));
   console.log(participantes);
 }
 
@@ -33,12 +32,22 @@ function addParticipante() {
   if (name != "") {
     idParticipante++;
     console.log(idParticipante);
-    pushParticipante(name, idParticipante);
-    renderNewParticipante(name, idParticipante);
+    pushParticipante(name);
+    renderNewParticipante(name);
   }
 }
 
-function deleteParticipante() {}
+function deleteParticipante() {
+    let aliveParticipantes = []
+    participantes.forEach(participante => {
+        if (participante.participacion == true) {
+            aliveParticipantes.push(participante)
+        }
+    })
+    let randomDeleteParticipante = Math.floor(Math.random() * aliveParticipantes.length)
+    aliveParticipantes[randomDeleteParticipante].participacion = false
+    document.getElementById('pa-' + aliveParticipantes[randomDeleteParticipante].id).classList.remove('active')
+}
 
 let btnAddParticipante = document.getElementById("addParticipante");
 btnAddParticipante.addEventListener("click", addParticipante);
