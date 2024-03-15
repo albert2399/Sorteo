@@ -45,6 +45,8 @@ function addParticipante() {
     idParticipante++;
     pushParticipante(name);
     renderNewParticipante(name);
+    let audio2 = new Audio("audio/add.mp3");
+    audio2.play();
   }
 }
 
@@ -63,7 +65,7 @@ function deleteParticipante() {
     document
       .getElementById("pa-" + aliveParticipantes[randomDeleteParticipante].id)
       .classList.remove("active");
-    var audio = new Audio("audio/disparo.mp3");
+    let audio = new Audio("audio/disparo.mp3");
     audio.play();
   }
 }
