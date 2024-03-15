@@ -1,0 +1,77 @@
+body {
+    background-color: #f8f8f8;
+    font-family: "Poppins", sans-serif;
+}
+
+.container {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#table {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(4, 1fr);
+    margin-top: 40px;
+}
+
+.participante {
+    padding: 12px 18px;
+    background-color: white;
+    border: 2px solid black;
+    border-radius: 4px;
+    width: auto;
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.participacion {
+    width: 12px;
+    height: 12px;
+    border-radius: 50px;
+    border: 2px solid black;
+    background-color: greenyellow;
+}
+
+.participante p {
+    margin-bottom: 0px;
+    margin-top: 0px;
+    font-size: 24px;
+}
+
+button {
+    padding: 8px 14px;
+    background-color: white;
+    border: 2px solid black;
+    border-radius: 4px;
+    font-size: 18px;
+}
+
+.divAdd {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.box {
+    width: 846px;
+}
+
+input#name {
+    padding: 8px 14px;
+    border: 2px solid black;
+    border-radius: 4px;
+    width: 215px;
+}
+
+.divStart {
+    margin-top: 45px;
+    display: flex;
+    justify-content: center;
+}
