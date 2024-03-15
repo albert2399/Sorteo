@@ -1,0 +1,16 @@
+//HTML
+
+placeholder="Introduce el nombre..."
+
+//CSS
+
+button{
+    font-size: 13px;
+    font-family: "Poppins", sans-serif;}
+
+header/i{
+    background: linear-gradient(to bottom, black, gray);
+    -webkit-background-clip: text; /* Para WebKit (Chrome, Safari, etc.) */
+    background-clip: text;
+    color: transparent;
+}
