@@ -87,22 +87,14 @@ input#name {
 header {
     text-align: center;
     width: 100%;
-    margin-bottom: 30px;
 }
 header h1{
     display: inline;
     font-style: oblique;
-    background: linear-gradient(blue, pink);
-    background-size: cover;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
     font-size: 80px;
     font-family: "Poppins", sans-serif;
-}
-.fa-solid{
-    background: linear-gradient(red, green);
-    background-size: cover;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-
+    background: linear-gradient(to bottom, black, lightgray);
+    -webkit-background-clip: text; /* Para WebKit (Chrome, Safari, etc.) */
+    background-clip: text;
+    color: transparent;
 }
