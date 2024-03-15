@@ -87,11 +87,14 @@ input#name {
 header {
     text-align: center;
     width: 100%;
-
 }
 header h1{
     display: inline;
     font-style: oblique;
     font-size: 80px;
     font-family: "Poppins", sans-serif;
+    background: linear-gradient(to bottom, black, lightgray);
+    -webkit-background-clip: text; /* Para WebKit (Chrome, Safari, etc.) */
+    background-clip: text;
+    color: transparent;
 }
