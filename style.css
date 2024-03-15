@@ -27,6 +27,10 @@ body {
     gap: 8px;
     align-items: center;
     justify-content: space-between;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
 }
 
 .participacion {
@@ -44,7 +48,7 @@ body {
 .participante p {
     margin-bottom: 0px;
     margin-top: 0px;
-    font-size: 24px;
+    font-size: 15px;
 }
 
 button {
@@ -78,4 +82,14 @@ input#name {
     margin-top: 45px;
     display: flex;
     justify-content: center;
+}
+
+header {
+    text-align: center;
+    width: 100%;
+}
+header h1{
+    display: inline;
+    font-style: oblique;
+    background: linear-gradient(blue, pink);
 }
