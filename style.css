@@ -56,7 +56,8 @@ button {
     background-color: white;
     border: 2px solid black;
     border-radius: 4px;
-    font-size: 18px;
+    font-size: 13px;
+    font-family: "Poppins", sans-serif;
 }
 
 .divAdd {
@@ -76,6 +77,7 @@ input#name {
     border: 2px solid black;
     border-radius: 4px;
     width: 215px;
+    font-family: "Poppins", sans-serif;
 }
 
 .divStart {
@@ -93,7 +95,14 @@ header h1{
     font-style: oblique;
     font-size: 80px;
     font-family: "Poppins", sans-serif;
-    background: linear-gradient(to bottom, black, lightgray);
+    background: linear-gradient(to bottom, black, gray);
+    -webkit-background-clip: text; /* Para WebKit (Chrome, Safari, etc.) */
+    background-clip: text;
+    color: transparent;
+}
+
+i{
+    background: linear-gradient(to bottom, black, gray);
     -webkit-background-clip: text; /* Para WebKit (Chrome, Safari, etc.) */
     background-clip: text;
     color: transparent;
