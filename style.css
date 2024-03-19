@@ -119,3 +119,16 @@ i{
     background-clip: text;
     color: transparent;
 }
+
+footer {
+    background-color: black;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+footer p {
+    text-align: center;
+    font-weight: 600;
+    color: white;
+    margin-bottom: 0px;
+}
