@@ -121,7 +121,7 @@ i{
 }
 
 footer {
-    background-color: black;
+    background-color: white;
     padding-top: 20px;
     padding-bottom: 20px;
 }
@@ -129,6 +129,6 @@ footer {
 footer p {
     text-align: center;
     font-weight: 600;
-    color: white;
+    color: black;
     margin-bottom: 0px;
 }
