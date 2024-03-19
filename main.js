@@ -70,6 +70,12 @@ function deleteParticipante() {
         .classList.remove("active");
       let audio = new Audio("audio/disparo.mp3");
       audio.play();
+
+        // Si solo queda un ganador despues de eliminar el ultimo, hacemos que suene el audio del gandor
+        if (aliveParticipantes.length == 2) { // Ponemos dos porque al eliminar el segundo participante, solo quedaria 1, el ganador
+          let audioGanador = new Audio("audio/ganador.mp3");
+          audioGanador.play();
+        }
     }
   }
 }
